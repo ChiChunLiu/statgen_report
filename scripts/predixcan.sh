@@ -20,6 +20,7 @@ python3 /project2/hgen47100/software2/MetaXcan/software/SPrediXcan.py \
 
 export -f run_predixcan
 
-run_predixcan Skin_Not_Sun_Exposed_Suprapubic
-run_predixcan Skin_Sun_Exposed_Lower_leg
-run_predixcan Whole_Blood
+#run_predixcan Skin_Not_Sun_Exposed_Suprapubic
+#run_predixcan Skin_Sun_Exposed_Lower_leg
+#run_predixcan Whole_Blood
+run_predixcan Cells_EBV-transformed_lymphocytes
