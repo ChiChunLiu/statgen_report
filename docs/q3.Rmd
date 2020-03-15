@@ -1,0 +1,46 @@
+---
+title: ''
+author: "Chi-Chun Liu"
+date: "3/14/2020"
+output: html_document
+---
+
+## LD-score plots
+```{r}
+
+
+
+```
+
+
+## Manhattan plot
+```{r}
+library(ggplot2)                                             ## Load package
+assoc_QC2 <- read.table(                                     ## Read in data
+  "data/assoc_QC2.assoc",
+  header = TRUE, stringsAsFactors = FALSE
+)  
+assoc_QC2 <- subset(assoc_QC2, P != "NA")                    ## Trim data
+
+
+#Sets a color scheme for the chromosomes w/ hex codes, these can also be coded with plaintext names (i.e. "red")
+our_colors <- c("#FF0000", "#a6cee3","#0000FF","#1f78b4",
+                "#00FF00","#b2df8a","#33a02c","#fb9a99",
+                "#91003f","#fdbf6f","#ff7f00","#cab2d6",
+                "#6a3d9a","#ffff99","#b15928","#d95f0e",
+                "#377eb8","#4d4d4d","#999999","#dd1c77",
+                "#542788","#c994c7")
+
+#Sets the bonferroni-corrected threshold
+bonferroni <- -log(0.05 / length(assoc_QC2$P))
+
+#Plots the data with all the aesthetic and plotting options
+ggplot(assoc_QC2)  + 
+  geom_point(aes(x = BP, y = -log(P), color = factor(CHR)), size = 2, alpha = 0.5) + 
+  scale_y_continuous(limits = c(0,15)) + 
+  geom_hline(yintercept = bonferroni, linetype = 2) + 
+  xlab("SNP Position (Chromosomes Ordered 1-22)") + 
+  ylab("Association Significance (-log(p-value))") + 
+  labs(color = 'Chromosome') +
+  scale_colour_manual(values = our_colors)
+```
