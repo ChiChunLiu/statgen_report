@@ -114,10 +114,11 @@ knitr::include_graphics("../figs/forrest_plot.png")
 Eczema is a complex disease caused by both genetic and environmental components, and I performed mendelian randomization to test hypotheses on contribution from environmental variables. It has been proposed that vitamin D plays an important role in epidermal barrier dysfunction, so deficiency in Vitamin D maybe associated Eczema. In addition, studies have also suggested that exposure to smoke negatively affects immune systems and leads to higher risk for Eczema. Across all summarization schemes, the null hypotheses that smoking or Vitamin D levels not being associated with Eczema could not be rejected from the UK biobank summary statistics (Fig. \ref{fig:MR}).
 
 ## Discussion
-By intergrating computational tools for post-GWAS analyses, I showed that genes linked to immune responses or epidermal structures are associated with eczema, while environmental variables such as smoking and deficienty in vitamin D is not significantly correlated with the disease status. There are several limitations in the study above. First, self-reported dermatitis is a vague term that can lead to pooling atopic dermatitis, contact dermatitis, stasis dermatitis. Second, the UK Biobank suffers from bias due to the use of European cohort. There are observations that, hay fever, eczema, and asthma frequently exist in the same individulas. Hence, further steps such as colocalization can further elucidate genetic causes for eczema.
+By intergrating computational tools for post-GWAS analyses, I identified four lead SNPs from the UK biobank GWAS with self-reported eczema. I showed that genes linked to immune responses or epidermal structures are associated with eczema, while environmental variables such as smoking and deficienty in vitamin D is not significantly correlated with the disease status. However, there are several limitations in the study above. First, self-reported dermatitis is a vague term that can lead to pooling atopic dermatitis, contact dermatitis, stasis dermatitis. Second, the UK Biobank suffers from bias due to the use of European cohort. In addition to better phenotying and recruiting multi-ethic cohorts, there are observations that allergic diseases such as hay fever, eczema, and asthma frequently exist in the same individulas. Hence, further steps such as colocalization can further elucidate genetic causes for eczema.
 
 ## Data availability
-The scripts used for the analysis, and raw outputs from predixcan are availble here:
+All scripts used for the analysis, and raw outputs from predixcan are availble here:
+https://github.com/ChiChunLiu/statgen_report.git
 
 ## Reference
 

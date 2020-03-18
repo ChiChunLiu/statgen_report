@@ -7,7 +7,6 @@ output:
 
 ---
 
-
 ## Problem 1
 a. 
 A founding effect together with limited gene-flows lead to lower haplotype diversity and enrichment of rare disease alleles in an isolated population. They also lead to less population structure and admixture that can serve as confounders. Moreover, environments in an isolated population are likely more homogeneous due to shared cultures and lifestyles, and can both reduce potential confounding effects and increase statistical power. These result in higher power in finding association between a locus and a phenotype.
@@ -16,7 +15,7 @@ b.
 Reduced effective population sizes as mentioned in (a) lead to lower haplotype diversity and long identity-by-descent tracts. So a smaller number of reference individuals sequenced by researchers can be representative enough to capture haplotype patterns in imputation targets formed by an isolated population. Longer shared haplotypes are easier to identify statistically as well.
 
 c. 
-When performing association analysis, we can use mixed effect models with a genetic relationship matrix to correct for cryptic relatedness and population structure. We can also intergrate large-scale pedigree into our relationship matrix if the information is available.
+When performing association analysis, we can use mixed effect models with a genetic relationship matrix to correct for cryptic relatedness and population structure. We can also intergrate pedigrees, namely the expected relatedness into our relationship matrix if the information is available.
 
 
 d. 
@@ -29,12 +28,11 @@ a.
 Health condition and life-span is highly correlated, because an healthier individual is expected to live longer. We can thus investigate genetic contribution to longevity with certain health conditions. We can define our case cohort, which has achieved a critical age threshold without a set of pre-specified health complications and diseases. The cases will by definition be alive when the study is performed.  
 We will select healthy young people as controls, since people without longevity born in the same birth cohort with our cases are not alive. We can't select people of similar age to the cases since we missed a lot of people who died young. However, we have to be very careful about confounders such as population stratification and environmental contributions. These confounders arise because our cases and controls were born in different times with different demographic compositions and environments. We will perform clustering analysis to match genome-wide genetic profile between our cases and controls, and use a mixed effect model to mitigate confounding effects.
 
-
 b. 
-We will make use of transcriptome studies from publicly available databases such as GTEx. Also, we can run `Predixcan` on multiple tissue types and run enrichment analyses on the results.
+We can first see if the variants reaching genome-wide significance land in coding regions of particualr genes. If not we can use chromHMM to predict their regulatory effects. We will make use of transcriptome studies from publicly available databases such as GTEx to see which tissues the above effects manifest in. Also, we can run `Predixcan` on multiple tissue types and run enrichment analyses on the results.
 
 c. 
-We will again utilize utilize public available resources such as ENCODE as annotation. After computationally predicting effects of the variants we can look into experimental databases of model organisms.
+First, we can first look into GWAS catalog and see if variants in the peaked regions are linked to diseases, and check if they are eQTLs with GTEx. And after computationally predicting the effects of the variants we can then look into model organism databases to look for experimental results.
 
 
 d. 
@@ -43,9 +41,6 @@ One possibilty is that we have missed rare variants due to lower statistical pow
 
 e. 
 We can test if there is significantly less disease risk alleles carried by the cases, the people who have achieved longevity compared to the controls. The disease risk alleles can be obtained from databases such as GWAS catalog and UK Biobank GWAS summary statistics. One caveat is that the risk alleles might have other protective effects for these cases. If the above test is not significant, we may lean toward the hypothesis that the cases have more protective alleles. If these variants are actually protective, they should increase in frequencies with respect to age. Moreover, if these variants are protective against another disease variant, we might expect an increase in frequencies of those risk variants in our cases.
-
-
-
 
 
 
