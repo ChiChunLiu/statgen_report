@@ -1,0 +1,19 @@
+---
+title: "Untitled"
+author: "Chi-Chun Liu"
+date: "3/15/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r, echo=FALSE, message=FALSE}
+library(kableExtra)
+library(tidyverse)
+read_tsv('../output/leadSNPs.txt') %>%
+  select(uniqID, rsID, chr, pos, p) %>%
+  kable('latex', col.names = c("unique ID", "rsID", "chromosome", "position", "p-value") ,
+        caption = "lead SNPS from FUMA", booktabs=TRUE ) %>%
+  row_spec(1:4, hline_after = F) %>%
+  kable_styling(latex_options = c("hold_position"))
+```

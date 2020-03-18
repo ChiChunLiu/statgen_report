@@ -4,18 +4,19 @@ author: "Chi-Chun Liu"
 date: "3/13/2020"
 output:
   pdf_document: default
+
 ---
+
 
 ## Problem 1
 a. 
-A founding effect or a smaller effective population size together with limited gene-flows lead to lower haplotype diversity and enrichment of rare disease alleles. They also lead to less population structure and admixture that can serve as confounders. Moreover, environments in an isolated population are likely more homogeneous due to shared cultures and lifestyles, and can reduce potential confounding effects. These result in higher power in finding association between a locus and a phenotype.
-
+A founding effect together with limited gene-flows lead to lower haplotype diversity and enrichment of rare disease alleles in an isolated population. They also lead to less population structure and admixture that can serve as confounders. Moreover, environments in an isolated population are likely more homogeneous due to shared cultures and lifestyles, and can both reduce potential confounding effects and increase statistical power. These result in higher power in finding association between a locus and a phenotype.
 
 b. 
 Reduced effective population sizes as mentioned in (a) lead to lower haplotype diversity and long identity-by-descent tracts. So a smaller number of reference individuals sequenced by researchers can be representative enough to capture haplotype patterns in imputation targets formed by an isolated population. Longer shared haplotypes are easier to identify statistically as well.
 
 c. 
-When performing association analysis, we can use mixed effect models with a genetic relationship matrix to correct for cryptic relatedness and population structure.
+When performing association analysis, we can use mixed effect models with a genetic relationship matrix to correct for cryptic relatedness and population structure. We can also intergrate large-scale pedigree into our relationship matrix if the information is available.
 
 
 d. 
@@ -30,12 +31,10 @@ We will select healthy young people as controls, since people without longevity 
 
 
 b. 
-We can use methods that integrate multiple tissue types. We will make use of transcriptome studies from publicly available  databases such as GTEx.
-
-
+We will make use of transcriptome studies from publicly available databases such as GTEx. Also, we can run `Predixcan` on multiple tissue types and run enrichment analyses on the results.
 
 c. 
-We will again utilize utilize public available resources such as ENCODE as annotation.
+We will again utilize utilize public available resources such as ENCODE as annotation. After computationally predicting effects of the variants we can look into experimental databases of model organisms.
 
 
 d. 
@@ -44,27 +43,6 @@ One possibilty is that we have missed rare variants due to lower statistical pow
 
 e. 
 We can test if there is significantly less disease risk alleles carried by the cases, the people who have achieved longevity compared to the controls. The disease risk alleles can be obtained from databases such as GWAS catalog and UK Biobank GWAS summary statistics. One caveat is that the risk alleles might have other protective effects for these cases. If the above test is not significant, we may lean toward the hypothesis that the cases have more protective alleles. If these variants are actually protective, they should increase in frequencies with respect to age. Moreover, if these variants are protective against another disease variant, we might expect an increase in frequencies of those risk variants in our cases.
-
-
-
-## Problem 3
-
-
-a.
-**Abstract**
-
-b. 
-**Introduction**
-
-c. 
-**Result Manhattan**
-
-d. 
-**S-PrediXcan**
-
-d. 
-**Discussion**
-
 
 
 
